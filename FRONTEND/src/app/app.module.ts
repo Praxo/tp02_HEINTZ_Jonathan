@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     FooterComponent,
     RegisterComponent,
-    DashboardComponent
+    AccountComponent
   ],
   imports: [
     BrowserModule
