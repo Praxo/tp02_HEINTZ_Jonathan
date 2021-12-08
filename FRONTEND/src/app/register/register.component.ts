@@ -11,7 +11,7 @@ export class RegisterComponent implements OnInit {
   adress: string = "";
   zipCode: number = 0;
   city: string = "";
-  phoneNumber: string = "048845";
+  phoneNumber: string = "";
   email: string = "";
   gender: boolean = false;
   password: string = "";

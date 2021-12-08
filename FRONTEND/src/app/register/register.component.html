@@ -1,7 +1,7 @@
 <div *ngIf="showData">
   <app-account [firstName]="firstName" [lastName]="lastName" [adress]="adress" [city]="city" [phoneNumber]="phoneNumber"
-    [email]="email" [gender]="gender" [password]="password" [passwordConfirmation]="passwordConfirmation"
-    [login]="login">
+    [email]="email" [zipCode]="zipCode" [gender]="gender" [password]="password"
+    [passwordConfirmation]="passwordConfirmation" [login]="login">
   </app-account>
 </div>
 
@@ -10,62 +10,66 @@
   <form id="myForm">
     <div class="form-group">
       <label for="exampleFormControlInput1">Prénom</label>
-      <input type="text" class="form-control" id="userName">
+      <input type="text" class="form-control" id="userName" pattern="[A-Za-z ]{1,32}" name="firstName"
+        [(ngModel)]="firstName">
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlInput1">Nom</label>
-      <input type="text" class="form-control" id="userLastName">
+      <input type="text" class="form-control" id="userLastName" name="lastName" [(ngModel)]="lastName"
+        pattern="[A-Za-z ]{1,32}">
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlInput1">Adresse</label>
-      <input type="text" class="form-control" id="userAdress">
+      <input type="text" class="form-control" name="adress" id="userAdress" [(ngModel)]="adress">
     </div>
 
     <div class="form-group">
-      <label for="exampleFormControlInput1">Code postale</label>
-      <input type="number" class="form-control" id="userCP">
+      <label for="exampleFormControlInput1">Code postal</label>
+      <input type="number" class="form-control" name="zipCode" [(ngModel)]="zipCode" id="userCP">
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Ville</label>
-      <input type="text" class="form-control" id="userCity">
+      <input type="text" class="form-control" id="userCity" name="city" [(ngModel)]="city">
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Téléphone</label>
-      <input type="tel" class="form-control" [(ngModel)]="phoneNumber">
+      <input type="tel" class="form-control" [(ngModel)]="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber">
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlInput1">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email"
+        [(ngModel)]="email">
     </div>
 
     <div class="form-check checkbox-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <input class="form-check-input" type="radio" id="inlineRadio1" value="option1" name="gender" [(ngModel)]="gender">
       <label class="form-check-label" for="inlineRadio1">Homme</label>
     </div>
 
     <div class="form-check checkbox-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <input class="form-check-input" type="radio" id="inlineRadio2" value="option2" name="gender" [(ngModel)]="gender">
       <label class="form-check-label" for="inlineRadio2">Femme</label>
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Mot de passe</label>
-      <input type="password" class="form-control" id="userPassword" required>
+      <input type="password" class="form-control" id="userPassword" name="password" [(ngModel)]="password" required>
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Confirmation mot de passe</label>
-      <input type="password" class="form-control" id="userPasswprdConfirmation" required>
+      <input type="password" class="form-control" id="userPasswprdConfirmation" name="passwordConfirmation"
+        [(ngModel)]="passwordConfirmation" required>
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Login</label>
-      <input type="text" class="form-control" id="userLogin" required>
+      <input type="text" class="form-control" id="userLogin" name="login" [(ngModel)]="login" required>
     </div>
 
     <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
