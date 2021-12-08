@@ -11,9 +11,9 @@ export class AccountComponent implements OnInit {
   @Input() adress: string = "";
   @Input() zipCode: number = 0;
   @Input() city: string = "";
-  @Input() phoneNumber: number = 0
+  @Input() phoneNumber: string = "";
   @Input() email: string = "";
-  @Input() gender: string = "";
+  @Input() gender: boolean = false;
   @Input() password: string = "";
   @Input() passwordConfirmation: string = "";
   @Input() login: string = "";

@@ -3,9 +3,9 @@
 <p>Adresse : {{adress}}</p>
 <p>Code Postale {{zipCode}}</p>
 <p>Ville : {{city}}</p>
-<p>Numéro de téléphone : {{phoneNumber}}</p>
+<p>Numéro de téléphone : {{phoneNumber | phone}}</p>
 <p>Adresse mail : {{email}}</p>
-<p>Sexe : {{gender}}</p>
+<p>Sexe : {{gender ? 'Femme' : 'Homme'}}</p>
 <p>Mot de passe : {{password}}</p>
 <p>Confirmation mot de passe : {{passwordConfirmation}}</p>
 <p>Login : {{login}}</p>

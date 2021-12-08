@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { AccountComponent } from './account/account.component';
 import { FormsModule } from '@angular/forms';
+import { PhonePipe } from './Pipe/PhonePipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     RegisterComponent,
-    AccountComponent
+    AccountComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
